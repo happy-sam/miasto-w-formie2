@@ -46,11 +46,21 @@ header {
           font-size: 14px;
           color: #2D5898;
           letter-spacing: 0.5px;
-          padding: 0;
-          margin: 0; }
+          padding: 0 10px;
+          margin: 0;
+          transition: 0.3s; }
+          header nav .navbar-collapse ul li:hover {
+            background: #FFDA1A;
+            transition: 0.3s; }
       header nav .navbar-collapse .navbar-text {
         height: 100px;
-        padding: 0; }
+        padding: 0;
+        transition: 0.4s; }
+        header nav .navbar-collapse .navbar-text:hover {
+          color: #4990E2;
+          transform: rotate(360deg);
+          transition: 0.4s;
+          cursor: grab; }
         header nav .navbar-collapse .navbar-text i {
           line-height: 100px;
           font-size: 15.5px;

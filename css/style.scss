@@ -44,11 +44,11 @@ header{
         margin: 0 auto;
         height: 100px;
         max-width: 1440px;        
-        padding: 17px 50px;                
+        padding: 17px 50px;                        
             
         .navbar-collapse{            
             height: 100px;
-            line-height: 100px;                              
+            line-height: 100px;                        
             
             ul{     
                 width: 100%;
@@ -69,19 +69,32 @@ header{
                     font-size: 14px;
                     color: $dark-blue;
                     letter-spacing: 0.5px;                    
-                    padding: 0;
-                    margin: 0;                    
+                    padding: 0 10px;;
+                    margin: 0;              
+                    transition: 0.3s;
+                    &:hover{
+                        background: $yellow;
+                        transition: 0.3s;
+                    }
                 }
             }
             
             .navbar-text{
                 height: 100px;                
                 padding: 0;
+                transition: 0.4s;
+                &:hover{ 
+                    color: $blue;
+                    transform: rotate(360deg);
+                    transition: 0.4s;
+                    cursor: grab;
+                }
                 
                 i{
                     line-height: 100px;                        
                     font-size: 15.5px;
-                    color: $dark-blue;
+                    color: $dark-blue;                    
+                    
                 }
             }
         }
