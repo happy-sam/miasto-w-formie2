@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=latin-ext");
+body {
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  top: 0; }
+
+a {
+  text-decoration: none;
+  padding: 0px; }
+
+a:focus {
+  outline: none; }
+
+li {
+  list-style: none; }
+
+header {
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  height: 100px;
+  padding: 0;
+  margin: 0; }
+  header nav {
+    margin: 0 auto;
+    height: 100px;
+    max-width: 1440px;
+    padding: 17px 50px; }
+    header nav .navbar-collapse {
+      height: 100px;
+      line-height: 100px; }
+      header nav .navbar-collapse ul {
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+        justify-content: flex-end;
+        padding-right: 45px; }
+        header nav .navbar-collapse ul .nav-link {
+          padding: 0; }
+        header nav .navbar-collapse ul li {
+          height: 100px;
+          line-height: 100px;
+          font-family: "Lato", sans-serif;
+          font-weight: bold;
+          font-size: 14px;
+          color: #2D5898;
+          letter-spacing: 0.5px;
+          padding: 0;
+          margin: 0; }
+      header nav .navbar-collapse .navbar-text {
+        height: 100px;
+        padding: 0; }
+        header nav .navbar-collapse .navbar-text i {
+          line-height: 100px;
+          font-size: 15.5px;
+          color: #2D5898; }
+
+/*# sourceMappingURL=style.css.map */
