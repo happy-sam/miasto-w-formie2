@@ -21,7 +21,10 @@ header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
   height: 100px;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  position: fixed;
+  top: 0;
+  z-index: 100; }
   header nav {
     margin: 0 auto;
     height: 100px;
@@ -65,5 +68,43 @@ header {
           line-height: 100px;
           font-size: 15.5px;
           color: #2D5898; }
+
+.socialmedia-box {
+  position: absolute;
+  right: 0;
+  top: 130px;
+  background: #2D5898;
+  height: 110px;
+  width: 60px;
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+  .socialmedia-box .socialmedia-box-fb,
+  .socialmedia-box .socialmedia-box-instagram {
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 50%; }
+    .socialmedia-box .socialmedia-box-fb i,
+    .socialmedia-box .socialmedia-box-instagram i {
+      font-size: 28px;
+      color: #2D5898;
+      line-height: 40px;
+      display: flex;
+      justify-content: center;
+      align-content: center; }
+
+main {
+  margin: 0 auto;
+  margin-top: 100px;
+  max-width: 1440px; }
+  main h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #4990E2;
+    letter-spacing: 1.43px; }
 
 /*# sourceMappingURL=style.css.map */
