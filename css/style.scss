@@ -7,7 +7,11 @@ $yellow: #FFDA1A;
 $blue: #4990E2;
 $dark-blue: #2D5898;
 $black: #000000;
+$white: #ffffff;
 
+*{
+    box-sizing: border-box;
+}
 
 body{
     margin: 0 auto;
@@ -33,7 +37,7 @@ li{
 //-- ----- MENU ----- --
 
 header{
-    background: #FFFFFF;
+    background: $white;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.30);
     height: 100px;
     padding: 0;
@@ -41,6 +45,7 @@ header{
     position: fixed;
     top: 0;
     z-index: 100;
+    background: $white;
 
     nav{
         margin: 0 auto;
@@ -51,6 +56,7 @@ header{
         .navbar-collapse{            
             height: 100px;
             line-height: 100px;                        
+            background: $white;
             
             ul{     
                 width: 100%;
@@ -121,16 +127,29 @@ header{
     .socialmedia-box-instagram{
         width: 40px;
         height: 40px;
-        background: #ffffff;
+        background: $white;
         border-radius: 50%;
+        transition: 0.3s;
+        border: 2px solid $dark-blue;
+        &:hover{            
+            background: $dark-blue;
+            border: 2px solid $white;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
         
         i{
             font-size: 28px;
             color: $dark-blue;
-            line-height: 40px;
+            line-height: 36px;
             display: flex;            
             justify-content: center;
             align-content: center;            
+            transition: 0.3s;
+            &:hover{
+                color: $white;            
+                transition: 0.3s;
+            }
         }            
     }        
 }
@@ -140,7 +159,35 @@ header{
 main{    
     margin: 0 auto;
     margin-top: 100px;
-    max-width: 1440px;    
+    max-width: 1440px; 
+    
+    .post-menu{        
+        padding: 0;       
+        color: #9B9B9B;
+       
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;            
+            padding: 30px 15px;
+            
+            a{
+                color: #9B9B9B;            
+                &:hover{
+                    color: $dark-blue;
+                    text-decoration: none;
+                }
+            }
+            
+            li{
+                font-family: $roboto;
+                font-size: 14px;                
+                letter-spacing: 0.5px;
+                padding-right: 5px;
+                line-height: 16px;
+            }
+        }    
+    }
     
     h1{
         font-family: $lato;
@@ -148,6 +195,26 @@ main{
         font-size: 40px;
         color: $blue;
         letter-spacing: 1.43px;
+        padding: 0;
+    }
+    
+    .post-article{
+        margin: 0 auto;
+        
+        article{
+            max-width: 962px;
+            
+            .post-img{
+                max-width: 932px;
+                
+                img{
+                    width: 932px;
+                    height: 400px;
+                }
+            }
+        }
+        
+        
     }
     
 }

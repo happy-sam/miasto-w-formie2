@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=latin-ext");
+* {
+  box-sizing: border-box; }
+
 body {
   margin: 0 auto;
   padding: 0;
@@ -17,14 +20,15 @@ li {
   list-style: none; }
 
 header {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
   height: 100px;
   padding: 0;
   margin: 0;
   position: fixed;
   top: 0;
-  z-index: 100; }
+  z-index: 100;
+  background: #ffffff; }
   header nav {
     margin: 0 auto;
     height: 100px;
@@ -32,7 +36,8 @@ header {
     padding: 17px 50px; }
     header nav .navbar-collapse {
       height: 100px;
-      line-height: 100px; }
+      line-height: 100px;
+      background: #ffffff; }
       header nav .navbar-collapse ul {
         width: 100%;
         height: 100px;
@@ -86,25 +91,67 @@ header {
     width: 40px;
     height: 40px;
     background: #ffffff;
-    border-radius: 50%; }
+    border-radius: 50%;
+    transition: 0.3s;
+    border: 2px solid #2D5898; }
+    .socialmedia-box .socialmedia-box-fb:hover,
+    .socialmedia-box .socialmedia-box-instagram:hover {
+      background: #2D5898;
+      border: 2px solid #ffffff;
+      transition: 0.3s;
+      box-sizing: border-box; }
     .socialmedia-box .socialmedia-box-fb i,
     .socialmedia-box .socialmedia-box-instagram i {
       font-size: 28px;
       color: #2D5898;
-      line-height: 40px;
+      line-height: 36px;
       display: flex;
       justify-content: center;
-      align-content: center; }
+      align-content: center;
+      transition: 0.3s; }
+      .socialmedia-box .socialmedia-box-fb i:hover,
+      .socialmedia-box .socialmedia-box-instagram i:hover {
+        color: #ffffff;
+        transition: 0.3s; }
 
 main {
   margin: 0 auto;
   margin-top: 100px;
   max-width: 1440px; }
+  main .post-menu {
+    padding: 0;
+    color: #9B9B9B; }
+    main .post-menu ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      padding: 30px 15px; }
+      main .post-menu ul a {
+        color: #9B9B9B; }
+        main .post-menu ul a:hover {
+          color: #2D5898;
+          text-decoration: none; }
+      main .post-menu ul li {
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        padding-right: 5px;
+        line-height: 16px; }
   main h1 {
     font-family: "Lato", sans-serif;
     font-weight: bold;
     font-size: 40px;
     color: #4990E2;
-    letter-spacing: 1.43px; }
+    letter-spacing: 1.43px;
+    padding: 0; }
+  main .post-article {
+    margin: 0 auto; }
+    main .post-article article {
+      max-width: 962px; }
+      main .post-article article .post-img {
+        max-width: 932px; }
+        main .post-article article .post-img img {
+          width: 932px;
+          height: 400px; }
 
 /*# sourceMappingURL=style.css.map */
