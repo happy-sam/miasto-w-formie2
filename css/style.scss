@@ -372,3 +372,134 @@ main{
 
 //-- ----- BOXY Z DODATKOWYMI ARTYKUŁAMI  ----- --
 
+
+
+//-- ----- PASEK Z LOGOTYPAMI  ----- --
+
+.slider-logos{    
+    width: 100%;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    margin: 0 auto;    
+    display: flex;
+    justify-content: center;    
+    position: relative;
+    top: 0;    
+    
+    .gray-line{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 1px;
+    }
+    
+    .logos{
+        width: 100%;
+        max-width: 1440px;
+    }
+}
+
+//-- ----- STOPKA  ----- --
+
+footer{
+    margin: 0 auto;
+    background: $black;
+    font-family: $lato;
+    font-size: 14px;
+    color: $white;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    
+    .footer-bocks{
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;            
+        
+        .foot-1{
+            
+            ul{
+                padding: 0;
+            }
+            
+            a{
+                color: $white;
+                transition: 0.3s;
+                &:hover{
+                    color: $yellow;
+                    text-decoration: none;
+                    transition: 0.3s;
+                }
+            }
+            
+            i{
+                font-weight: bold;                
+                transition: 0.3s;
+                &:hover{
+                    transition: 0.3s;
+                    color: $yellow;
+                    transform: rotate(360deg);                    
+                }   
+            }
+        }
+        
+        .foot-2{
+            
+            ul{
+                padding: 0;                
+                
+                li{
+                    
+                    .box-for-icon{
+                        display: inline-block;
+                        width: 20px;                                                
+                        text-align: center;
+                    }
+
+                    i{
+                        
+                        color: $yellow;
+                    }
+                    
+                    a{
+                        color: $white;
+                        transition: 0.3s;
+                        &:hover{
+                            text-decoration: none;
+                            color: $yellow;
+                            transition: 0.3s;
+                        }
+                    }                    
+                }
+            }
+        }
+        
+        .foot-3{            
+            display: flex;
+            justify-content: flex-start;            
+            align-items: center;
+            flex-direction: column;
+            padding-left: 50px;
+            
+            ul{
+                padding: 0;
+                
+                a{
+                    color: $yellow;
+                    text-decoration: none;
+                }
+            }
+            
+            h6{
+                padding-top: 85px;
+                font-family: $lato;
+                font-size: 14px;
+                color: #9B9B9B;
+                letter-spacing: 0.5px;
+                line-height: 17px;
+            }
+            
+        }
+    }    
+}

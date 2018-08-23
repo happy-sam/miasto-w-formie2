@@ -277,4 +277,86 @@ main {
               main .post-article aside .aside-info2 .aside-info2-sm .box-sm i:hover {
                 color: #2D5898; }
 
+.slider-logos {
+  width: 100%;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 0; }
+  .slider-logos .gray-line {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1px; }
+  .slider-logos .logos {
+    width: 100%;
+    max-width: 1440px; }
+
+footer {
+  margin: 0 auto;
+  background: #000000;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  line-height: 30px;
+  padding-top: 20px;
+  padding-bottom: 50px; }
+  footer .footer-bocks {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto; }
+    footer .footer-bocks .foot-1 ul {
+      padding: 0; }
+    footer .footer-bocks .foot-1 a {
+      color: #ffffff;
+      transition: 0.3s; }
+      footer .footer-bocks .foot-1 a:hover {
+        color: #FFDA1A;
+        text-decoration: none;
+        transition: 0.3s; }
+    footer .footer-bocks .foot-1 i {
+      font-weight: bold;
+      transition: 0.3s; }
+      footer .footer-bocks .foot-1 i:hover {
+        transition: 0.3s;
+        color: #FFDA1A;
+        transform: rotate(360deg); }
+    footer .footer-bocks .foot-2 ul {
+      padding: 0; }
+      footer .footer-bocks .foot-2 ul li .box-for-icon {
+        display: inline-block;
+        width: 20px;
+        text-align: center; }
+      footer .footer-bocks .foot-2 ul li i {
+        color: #FFDA1A; }
+      footer .footer-bocks .foot-2 ul li a {
+        color: #ffffff;
+        transition: 0.3s; }
+        footer .footer-bocks .foot-2 ul li a:hover {
+          text-decoration: none;
+          color: #FFDA1A;
+          transition: 0.3s; }
+    footer .footer-bocks .foot-3 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      padding-left: 50px; }
+      footer .footer-bocks .foot-3 ul {
+        padding: 0; }
+        footer .footer-bocks .foot-3 ul a {
+          color: #FFDA1A;
+          text-decoration: none; }
+      footer .footer-bocks .foot-3 h6 {
+        padding-top: 85px;
+        font-family: "Lato", sans-serif;
+        font-size: 14px;
+        color: #9B9B9B;
+        letter-spacing: 0.5px;
+        line-height: 17px; }
+
 /*# sourceMappingURL=style.css.map */
