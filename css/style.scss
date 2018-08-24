@@ -8,9 +8,11 @@ $blue: #4990E2;
 $dark-blue: #2D5898;
 $black: #000000;
 $white: #ffffff;
+$grey: #9B9B9B;
 
 *{
     box-sizing: border-box;
+    font-family: $lato;    
 }
 
 body{
@@ -169,7 +171,7 @@ main{
     
     .post-menu{        
         padding: 0;       
-        color: #9B9B9B;
+        color: $grey;
        
         ul{
             display: flex;
@@ -179,7 +181,7 @@ main{
             margin: 0;
             
             a{
-                color: #9B9B9B;            
+                color: $grey;            
                 &:hover{
                     color: $dark-blue;
                     text-decoration: none;
@@ -226,6 +228,8 @@ main{
                 width: 100%;
                 background-size: cover;
                 margin-bottom: 30px;
+                height: 400px;
+                background-image: url(../img/foto1.jpg);
                 
                 img{
                     max-width: 962px;
@@ -372,7 +376,242 @@ main{
 
 //-- ----- BOXY Z DODATKOWYMI ARTYKUŁAMI  ----- --
 
+.boxes-articles{
+    
+    .boxes{
+        max-width: 1400px;        
+        margin: 0 auto;
+        padding-bottom: 70px;
+     
+        .boxes-topic{
+            width: 100%;
+            font-family: $lato;
+            font-weight: 100;
+            font-size: 40px;
+            color: $blue;
+            letter-spacing: 1.43px;
+            line-height: 48px;
+            padding-top: 75px;
+            padding-bottom: 30px;
+        }
+        
+        .col3-inside{
+            max-width: 304px;
+            width: 100%;
+            position: relative;
+            top: 0;     
+            &:hover{
+                .news2-box-description{                             
+                    background-color: rgba(45,88,152, 0.8);
+                    transition: 0.3s;    
+                    
+                    img{
+                        filter: invert(0);
+                        transition: 0.3s;
+                        transform: rotate(360deg);
+                    }
+                    
+                    .news-search{    
+                        color: $white;    
+                        transition: 0.3s;
+                    }                    
+                }    
+            }
+            
+            .box-news1-img{
+                max-width: 304px;
+                max-height: 304px;
+                width: 100%;                                
+            }
+            
+            .news1-box-description{
+                width: 100%;
+                max-width: 304px;
+                position: absolute;
+                bottom: 0;
+                padding: 15px 30px;
+                background-image: -webkit-linear-gradient(rgba(45,88,152,0.00) 0%, rgba(45,88,152,0.8) 38%);
+                background-image: -o-linear-gradient(rgba(45,88,152,0.00) 0%, rgba(45,88,152,0.8) 38%);
+                background-image: linear-gradient(rgba(45,88,152,0.00) 0%, rgba(45,88,152,0.8) 38%);                                
+                max-height: 100%;
+                &:hover{
+                    .news-hidden{    
+                        max-height: 100px;
+                        margin-top: 10px;
+                    }
+                    
+                    .news-hidden2{    
+                        max-height: 100px;
+                    }
+                }
+                                               
+                .news-date{
+                    opacity: 0.8;
+                    font-family: $lato;
+                    font-size: 18px;
+                    color: $white;
+                    letter-spacing: 0;
+                    line-height: 23px;
+                }
+                
+                .news-topic{
+                    font-family: $lato;
+                    font-weight: bold;
+                    font-size: 24px;
+                    color: $white;
+                    letter-spacing: 0;
+                    line-height: 23px;
+                }
+                
+                .news-hidden{
+                    transition: 0.3s;    
+                    margin: 0;
+                    font-size: 14px;
+                    color: rgba(255, 255, 255, 1);
+                    letter-spacing: 0; 
+                    
+                    max-width: 304px;        
+                    max-height: 0px;    
+                    margin-top: 0px;        
+                    overflow: hidden;    
+                    transition-property:max-height, margin-top;
+                    transition-duration:0.1s, 0.1s;
+                    transition-timing-function: linear, ease-in-out;
+                    transition-delay: 0.1s;   
+                    
+                }
+                                            
+                .icons{                        
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    
+                    .single-icon{
+                        width: 100%;
+                    
+                        object{    
+                        float: left;
+                        padding-right: 5px;
+                        display: inline-block;
+                        }
 
+                        .news-icon {
+                            font-size: 14px;
+                            color: $yellow;
+                            letter-spacing: 0;
+                            line-height: 17px;
+                            margin: 0;    
+                            float: left;
+                            display: inline-block;
+                        }
+
+                        .news-icon2 {
+                            font-size: 14px;
+                            color: $yellow;
+                            letter-spacing: 0;
+                            line-height: 17px;
+                            margin: 0;    
+                        }                        
+                    }                    
+                }
+                
+                .news-hidden2{    
+                    transition: 0.15s;    
+                    margin: 0;    
+                    line-height: 0px;
+                    font-size: 14px;    
+                    letter-spacing: 0;    
+                    padding: 0;    
+                    
+                    max-width: 304px;        
+                    max-height: 0px;                        
+                    margin-top: 0px;        
+                    overflow: hidden;    
+                    transition-property:max-height, margin-top;
+                    transition-duration:0.1s, 0.1s;
+                    transition-timing-function: linear, ease-in-out;
+                    transition-delay: 0.1s;   
+                    
+                    .single-icon2{
+                        width: 100%;
+                        padding-top: 10px;
+
+                        object {
+                            transition: 0.4s;        
+                            margin: 0;
+                            padding: 0;
+                            padding-right: 5px;    
+                             display: inline-block;
+                        }
+
+                        .news-icon3 {
+                            font-size: 14px;
+                            color: $yellow;
+                            letter-spacing: 0;
+                            line-height: 17px;    
+                            transition: 0.4s;   
+                            margin: 0;
+                            padding: 0;    
+                             display: inline-block;
+                        }
+
+                        button{
+                            float: right;
+                            display: inline-block;
+                            width: 100px;
+                            height: 30px;
+                            background-color: $yellow;
+                            border: none;
+                            border-radius: 100px;
+                            font-size: 12px;
+                            color: $blue;
+                            letter-spacing: 0;    
+                            transition: 0.4s;    
+                            padding: 0;
+                            border: 1px solid $yellow;
+                            text-decoration: none;
+                            &:hover{                  
+                                border: 1px solid $blue;
+                                background: $blue;                                
+                                a{                                
+                                text-decoration: none;
+                                    color: $yellow;                                
+                                }                             
+                            } 
+                        }
+                    }
+                }
+            } 
+            
+            .news2-box-description{        
+                position: absolute;
+                top: 0;        
+                padding: 10px 30px;
+                width: 100%;    
+                height: 100%;    
+                background-color:  rgba(255, 218, 26, .85);
+                transition: 0.3s; 
+                max-height: 100%;
+                
+                img{
+                    margin-top: 20%;
+                    margin-bottom: 10px;
+                    filter: invert(0.7);                    
+                    transition: 0.3s;
+                }
+                
+                .news-search{    
+                    width: 80%;
+                    font-weight: bold;
+                    font-size: 24px;
+                    color: $dark-blue;
+                    letter-spacing: 0;
+                    transition: 0.3s;
+                }
+            }
+        }    
+    }
+}
 
 //-- ----- PASEK Z LOGOTYPAMI  ----- --
 
@@ -398,6 +637,74 @@ main{
         max-width: 1440px;
     }
 }
+
+//!------
+
+.slidelist {
+    height: 120px;
+    margin-bottom: 70px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    border-top: 1px solid #ddd;
+}
+
+.slickinner{
+    ul {
+        list-style: none;
+        
+        li {
+            float: left;
+            margin: 0;
+            
+            img {
+                height: 86px;                  
+            }
+        }
+    }
+}
+
+.slide1{ 
+    img {
+        height:86px;  
+    }
+}
+
+.slide2{
+    
+    img {
+        height:86px;
+    }
+}
+
+.slick-slide{
+    .inner {
+        margin:0 0px;
+    }
+}
+
+#slideImg {
+//    padding:10px 20px;
+    position:relative;
+    margin:0 auto;
+    height: 86px;
+   
+    .rotate-prev {
+        display:none;
+    }
+
+    .slide1, .slide2{
+        margin-left:0;
+        padding-left:0;
+        margin-bottom:0;
+    }
+}
+
+
+
+
+//-----!
+
+
 
 //-- ----- STOPKA  ----- --
 
@@ -495,11 +802,11 @@ footer{
                 padding-top: 85px;
                 font-family: $lato;
                 font-size: 14px;
-                color: #9B9B9B;
+                color: $grey;
                 letter-spacing: 0.5px;
                 line-height: 17px;
-            }
-            
+            }            
         }
     }    
 }
+
