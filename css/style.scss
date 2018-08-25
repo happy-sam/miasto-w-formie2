@@ -46,7 +46,7 @@ header{
     margin: 0;    
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 101;
     background: $white;
 
     nav{
@@ -169,6 +169,11 @@ main{
     flex-direction: column;    
     padding: 0 15px;    
     
+    .row{
+        padding: 0;
+        margin: 0;
+    }
+    
     .post-menu{        
         padding: 0;       
         color: $grey;
@@ -209,8 +214,8 @@ main{
     }
     
     .post-article{
-        width: 100%;
         margin: 0 auto;
+        padding: 0;
         display: flex;
         flex-direction: row;        
         
@@ -299,7 +304,7 @@ main{
             
             .aside-map{
                 width: 100%;
-                max-width: 304px;
+                max-width: 354px;
                 height: 169px;
                 padding: 0;
                 border: 0;
@@ -315,7 +320,9 @@ main{
                 
                 .aside-button{
                     margin: 0 auto;
-                    width: 244px;
+                    max-width: 244px;
+                    min-width: 120px;
+                    width: 100%;
                     height: 40px;
                     background: $yellow;
                     border-radius: 100px;
@@ -401,21 +408,15 @@ main{
             position: relative;
             top: 0;     
             &:hover{
-                .news2-box-description{                             
-                    background-color: rgba(45,88,152, 0.8);
-                    transition: 0.3s;    
-                    
-                    img{
-                        filter: invert(0);
-                        transition: 0.3s;
-                        transform: rotate(360deg);
+                .news1-box-description {                    
+                    .news-hidden{    
+                        max-height: 45px;
+                        margin-top: 10px;
                     }
-                    
-                    .news-search{    
-                        color: $white;    
-                        transition: 0.3s;
-                    }                    
-                }    
+                    .news-hidden2{    
+                        max-height: 100px;
+                    }
+                }
             }
             
             .box-news1-img{
@@ -429,21 +430,11 @@ main{
                 max-width: 304px;
                 position: absolute;
                 bottom: 0;
-                padding: 15px 30px;
+                padding: 10px 30px;
                 background-image: -webkit-linear-gradient(rgba(45,88,152,0.00) 0%, rgba(45,88,152,0.8) 38%);
                 background-image: -o-linear-gradient(rgba(45,88,152,0.00) 0%, rgba(45,88,152,0.8) 38%);
                 background-image: linear-gradient(rgba(45,88,152,0.00) 0%, rgba(45,88,152,0.8) 38%);                                
                 max-height: 100%;
-                &:hover{
-                    .news-hidden{    
-                        max-height: 100px;
-                        margin-top: 10px;
-                    }
-                    
-                    .news-hidden2{    
-                        max-height: 100px;
-                    }
-                }
                                                
                 .news-date{
                     opacity: 0.8;
@@ -468,8 +459,7 @@ main{
                     margin: 0;
                     font-size: 14px;
                     color: rgba(255, 255, 255, 1);
-                    letter-spacing: 0; 
-                    
+                    letter-spacing: 0;                     
                     max-width: 304px;        
                     max-height: 0px;    
                     margin-top: 0px;        
@@ -477,8 +467,7 @@ main{
                     transition-property:max-height, margin-top;
                     transition-duration:0.1s, 0.1s;
                     transition-timing-function: linear, ease-in-out;
-                    transition-delay: 0.1s;   
-                    
+                    transition-delay: 0.1s;                       
                 }
                                             
                 .icons{                        
@@ -521,8 +510,7 @@ main{
                     line-height: 0px;
                     font-size: 14px;    
                     letter-spacing: 0;    
-                    padding: 0;    
-                    
+                    padding: 0;                        
                     max-width: 304px;        
                     max-height: 0px;                        
                     margin-top: 0px;        
@@ -541,7 +529,7 @@ main{
                             margin: 0;
                             padding: 0;
                             padding-right: 5px;    
-                             display: inline-block;
+                            display: inline-block;
                         }
 
                         .news-icon3 {
@@ -552,7 +540,7 @@ main{
                             transition: 0.4s;   
                             margin: 0;
                             padding: 0;    
-                             display: inline-block;
+                            display: inline-block;
                         }
 
                         button{
@@ -574,7 +562,7 @@ main{
                                 border: 1px solid $blue;
                                 background: $blue;                                
                                 a{                                
-                                text-decoration: none;
+                                    text-decoration: none;
                                     color: $yellow;                                
                                 }                             
                             } 
@@ -638,8 +626,6 @@ main{
     }
 }
 
-//!------
-
 .slidelist {
     height: 120px;
     margin-bottom: 70px;
@@ -698,13 +684,6 @@ main{
         margin-bottom:0;
     }
 }
-
-
-
-
-//-----!
-
-
 
 //-- ----- STOPKA  ----- --
 
@@ -810,3 +789,316 @@ footer{
     }    
 }
 
+
+@media screen and (max-width: 1199px){
+
+    //-- ----- BOX SOCIAL MEDIA  ----- --
+    
+    .socialmedia-box{
+        position: fixed;    
+        top: 110px;
+    }
+    
+    //-- ----- GŁÓWNA TREŚĆ + PRAWY BOX  ----- --
+
+    main{    
+        .post-article{            
+            aside{
+                .aside-info1{
+                    padding: 32px 20px;
+                }
+                .aside-info2{
+                    padding: 32px 20px;                
+                }
+            }
+        }    
+    }
+    
+    //-- ----- BOXY Z DODATKOWYMI ARTYKUŁAMI  ----- --
+
+    .boxes-articles{
+        .boxes{                       
+            .col-lg-3{
+                min-width: 304px;
+            }            
+        }
+    }    
+
+    //-- ----- STOPKA  ----- --
+
+    footer{        
+        .footer-bocks{            
+            .foot-3{                
+                h6{                    
+                    font-size: 13px;                   
+                }            
+            }
+        }    
+    }   
+}
+
+
+@media screen and (max-width: 991px){
+    
+    //-- ----- MENU ----- --
+
+    header{
+        max-height: 100%;
+
+        nav{
+            max-height: 100%;
+
+            .navbar-collapse{            
+                max-height: 100%;
+                line-height: 50px;                        
+
+                ul{     
+                    width: 100%;
+                    max-height: 100%;
+                    line-height: 50px;                  
+                    display: block;
+                    padding-right: 0px;
+
+                    li{
+                        height: 40px;
+                        line-height: 40px;            
+                        background: #fcfcfc;                        
+                        border: 1px solid rgba(0, 0, 0, 0.1);                        
+                    }
+                }
+
+                .navbar-text{
+                    display: none;
+                }
+            }        
+        }    
+    }
+        
+    //-- ----- GŁÓWNA TREŚĆ + PRAWY BOX  ----- --
+    
+    main{            
+        .post-article{            
+            article{
+                .post-img{                                    
+                    height: 300px;                    
+                    img{                    
+                        height: 300px;                        
+                    }
+                }
+            }              
+        }    
+    }
+    
+    //-- ----- BOXY Z DODATKOWYMI ARTYKUŁAMI  ----- --
+
+    .boxes-articles{
+        .boxes{                       
+            .col-md-4{
+                margin-bottom: 20px;
+            }            
+        }
+    }    
+}
+
+
+@media screen and (max-width: 767px){
+    
+    //-- ----- GŁÓWNA TREŚĆ + PRAWY BOX  ----- --
+
+    main{    
+
+        h1{
+            font-size: 30px;
+        }
+
+        .post-article{            
+
+            aside{
+                max-width: 767px;
+
+                .aside-info1{          
+                    max-width: 767px;
+                    padding: 32px;
+                }
+
+                .aside-map{
+                    max-width: 767px;
+                    height: 300px;
+                }
+
+                .aside-info2{
+                    max-width: 767px;
+                    padding: 32px;                
+
+                    .aside-button{
+                        max-width: 244px;
+                        min-width: 120px;
+                    }
+                }
+            }
+        }    
+    } 
+
+    //-- ----- BOXY Z DODATKOWYMI ARTYKUŁAMI  ----- --
+    
+    .boxes-articles{
+
+        .boxes{
+            max-width: 767px;        
+            
+            .col-lg-3{
+                min-width: 250px;
+            }            
+
+            .col3-inside{
+
+                .news1-box-description{
+                    padding: 10px 20px;                    
+
+                    .news-date{//                      
+                        font-size: 16px;
+                        line-height: 21px;
+                    }
+
+                    .news-topic{
+                        font-size: 20px;
+                        line-height: 21px;
+                    }                    
+                } 
+
+                .news2-box-description{                            
+                    padding: 10px 25px;                    
+
+                    .news-search{                            
+                        font-size: 22px;                        
+                    }
+                }
+            }    
+        }
+    }    
+
+    //-- ----- PASEK Z LOGOTYPAMI  ----- --
+
+    .slider-logos{            
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .slidelist {        
+        margin-bottom: 10px;
+        padding-top: 20px;
+        padding-bottom: 0px;        
+    }    
+    
+    //-- ----- STOPKA  ----- --
+
+    footer{        
+        font-size: 14px;        
+        .footer-bocks{          
+            .foot-3{            
+                padding-left: 0px;
+                h6{
+                    padding-top: 25px;                    
+                }            
+            }
+        }    
+    }
+}
+
+
+@media screen and (max-width: 575px){
+    
+    //-- ----- BOX SOCIAL MEDIA  ----- --
+
+    .socialmedia-box{
+        top: 100px;
+        height: 60px;
+        width: 110px;
+        border-radius: 0px 0 0 20px;
+        flex-direction: row;
+        z-index: 100;       
+    }    
+    
+    //-- ----- GŁÓWNA TREŚĆ + PRAWY BOX  ----- --
+
+    main{            
+        margin-top: 140px;        
+        padding: 0 5px;              
+    }
+    
+    //-- ----- BOXY Z DODATKOWYMI ARTYKUŁAMI  ----- --
+
+    .boxes-articles{
+        display: flex;
+
+        .boxes{            
+            flex-direction: column;            
+
+            .boxes-topic{
+                text-align: center;
+            }
+
+            .col3-inside{
+                max-width: 304px;
+
+                .box-news1-img{
+                    max-width: 304px;
+                    max-height: 304px;
+                    width: 100%;                                
+                }
+
+                .news1-box-description{
+                    width: 100%;
+                    max-width: 304px;
+
+                    .news-date{
+                        font-size: 18px;
+                        line-height: 23px;
+                    }
+
+                    .news-topic{                        
+                        font-size: 24px;                        
+                        line-height: 24px;
+                    }
+
+                    .news-hidden{                        
+                        max-width: 304px;                                
+                    }
+
+                    .news-hidden2{    
+                        max-width: 304px;        
+                    }
+                } 
+            }    
+        }
+    }    
+    
+    //-- ----- STOPKA  ----- --
+  
+    footer{        
+        font-size: 16px;   
+        
+        .footer-bocks{      
+            
+            .foot-1 {
+	            margin-bottom: 20px;
+            }
+            
+            .foot-2 {
+                margin-bottom: 20px;
+            }
+            
+            .foot-3{                            
+                justify-content: flex-start;            
+                align-items: flex-start;                
+                padding-left: 15px;
+                margin-bottom: 20px;                
+                
+                h6{
+                    padding-top: 25px;                
+                    font-size: 14px;                    
+                }            
+            }
+        }    
+    }    
+}
